@@ -76,25 +76,28 @@ function startQuiz(event) {
   }
   function plus() {
     setTimeout(() => {
+      if(countQuestion < 1){
+        alert("Attendre une seconde après chaque reponse")
+      }
       countQuestion++;
       commencerQuestion(countQuestion);
-    }, 10);
+    }, 1000);
   }
   function finDeLaPartie() {
     const h1 = document.createElement("h1");
     const p = document.createElement("p");
     h1.innerHTML = "Quiz terminé !";
-    let fel = "Malheureusement";
-    if (score > 3 && score < 6) {
+    let fel = "T'es null 😂";
+    if (score > 5 && score < 8) {
       fel = "Bravo";
-      p.innerHTML = `${fel} tu as eu ${score} sur ${quizThemes.length}`;
+      p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
       p.classList.add("moyen");
     } else if(score > 6) {
       fel = "Chapeau"
-      p.innerHTML = `${fel} tu as eu ${score} sur ${quizThemes.length}`;
+      p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
       p.classList.add("moyen");
     }else{
-      p.innerHTML = `${fel} tu as eu ${score} sur ${quizThemes.length}`;
+      p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
       p.classList.add("bas");
     }
 
@@ -104,7 +107,7 @@ function startQuiz(event) {
     setTimeout(() => {
       alert("Voulez vous recommencer la partie")
       startQuiz()
-    }, 5000);
+    }, 7000);
   }
 
   function creatAnswers(choices) {

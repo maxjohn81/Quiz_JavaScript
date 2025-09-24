@@ -13,6 +13,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.img1{
+  position: absolute;
+  width: 650px;
+}
+.img2{
+  position: absolute;
+  width: 500px;
+  right: 0;
+}
+
 .moyen {
   background: rgba(81, 242, 81, 0.65);
   height: 50px;
@@ -109,6 +119,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  
 }
 
 h1 {
@@ -117,13 +128,16 @@ h1 {
 }
 
 #app {
+  background: #fefefeb7;
   border-radius: 15px;
   width: 500px;
   margin: 0 auto;
   padding: 5px;
   text-align: center;
   padding: 15px;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #2f2e2e;
+  backdrop-filter: blur(5px);
+  z-index: 1;
 }
 
 #commencer {
@@ -176,5 +190,12 @@ h1 {
 
   #app {
     width: 430px;
+  }
+
+  .img1{
+    width: 500px;
+  }
+  .img2{
+    display: none;
   }
 }
