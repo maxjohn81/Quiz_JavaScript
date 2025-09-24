@@ -23,8 +23,19 @@
   right: 0;
 }
 
-.moyen {
+.genial {
   background: rgba(81, 242, 81, 0.65);
+  height: 50px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.moyen {
+  background: rgba(242, 234, 81, 0.65);
   height: 50px;
   align-items: center;
   display: flex;
@@ -119,7 +130,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  
+
 }
 
 h1 {

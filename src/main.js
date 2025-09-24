@@ -88,14 +88,14 @@ function startQuiz(event) {
     const p = document.createElement("p");
     h1.innerHTML = "Quiz terminé !";
     let fel = "T'es null 😂";
-    if (score > 5 && score < 8) {
+    if (score > 4 && score < 8) {
       fel = "Bravo";
       p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
       p.classList.add("moyen");
     } else if(score > 6) {
       fel = "Chapeau"
       p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
-      p.classList.add("moyen");
+      p.classList.add("genial");
     }else{
       p.innerHTML = `${fel} t' as eu ${score} sur ${quizThemes.length}`;
       p.classList.add("bas");
@@ -107,7 +107,7 @@ function startQuiz(event) {
     setTimeout(() => {
       alert("Voulez vous recommencer la partie")
       startQuiz()
-    }, 7000);
+    }, 20000);
   }
 
   function creatAnswers(choices) {
